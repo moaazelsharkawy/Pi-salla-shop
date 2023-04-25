@@ -1,3 +1,6 @@
+//detect pi browser and allow user open site in pi browser
+//by pioneer Moaaz Elsharkawy
+
 <script>
 
 function isPiBrowser() {
