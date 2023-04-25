@@ -50,7 +50,7 @@ openInPiBrowserBtn.style.marginRight = "10px";
   openInPiBrowserBtn.style.marginTop = "15px";
   openInPiBrowserBtn.style.borderRadius = "4px";
   openInPiBrowserBtn.style.cursor = "pointer";
-  openInPiBrowserBtn.setAttribute("href", "pi://pi.salla-shop.com"); // تغيير "example.com" بعنوان URL الخاص بالموقع المراد فتحه
+  openInPiBrowserBtn.setAttribute("href", "pi://pi.salla-shop.com"); // change "pi.salla-shop.com" to URL    
 
   dialogBox.appendChild(openInPiBrowserBtn);
 
