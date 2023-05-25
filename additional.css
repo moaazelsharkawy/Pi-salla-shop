@@ -1,0 +1,91 @@
+.header-button {
+
+}
+
+.header-button:active,
+.header-button:focus {
+  
+}
+
+.header-button:hover {
+
+  background-color: #e09b4e; 
+}
+
+
+.header_logo,
+.header-logo,
+.smush-detected-img,
+.smush-image-3 {
+ 
+}
+
+.header_logo:active,
+.header-logo:active,
+.smush-detected-img:active,
+.smush-image-3:active,
+.header_logo:focus,
+.header-logo:focus,
+.smush-detected-img:focus,
+.smush-image-3:focus {
+  
+  border: 2px solid #e09b4e; 
+}
+
+.search-field.mb-0 {
+  
+border-radius: 5px;
+}
+
+.search-field.mb-0:hover {
+
+  border-radius: 10px; 
+}
+
+.icon-search {
+  /* تنسيقات العنصر قبل التأثير */
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* حجم العنصر بدون تغيير */
+  }
+  50% {
+    transform: scale(1.1); /* زيادة حجم العنصر بنسبة 10% */
+  }
+  100% {
+    transform: scale(1); /* عودة العنصر إلى الحجم الأصلي */
+  }
+}
+
+.add-to-cart-button {
+  border-radius: 10px; 
+}
+
+.wishlist-button.button.is-outline.circle.icon {
+  color: #e09b4e;
+}
+
+.primary.is-small.mb-0.button.wp-element-button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-flat {
+  border-radius: 5px;
+  border-color: #e09b4e;
+  border-width: 1px;
+		  padding: 4px;
+}
+
+
+.primary.is-small.mb-0.button.wp-element-button.product_type_simple.is-flat {
+  border-radius: 5px;
+  border-color: #e09b4e;
+  border-width: 1px;
+	padding: 4px;
+		
+}
+
+.primary.is-small.mb-0.button.wp-element-button.product_type_variable.is-flat {
+		border-radius: 5px;
+  border-color: #e09b4e;
+  border-width: 1px;
+	padding: 4px;
+}
