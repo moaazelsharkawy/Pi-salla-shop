@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>صفحة مثال</title>
+</head>
+
+<body>
+    <script>
+        function isPiBrowser() {
+            return navigator.userAgent.indexOf("PiBrowser") !== -1;
+        }
+
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            );
+        }
+
+        // التحقق مما إذا كانت الرسالة قد ظهرت بالفعل
+        var alertShown = sessionStorage.getItem("pi_browser_alert_shown");
+
+        if (!alertShown && !isPiBrowser() && !isMobileDevice()) {
+            setTimeout(function () {
+                var dialogBox = document.createElement("div");
+                dialogBox.style.position = "fixed";
+                dialogBox.style.top = "50%";
+                dialogBox.style.left = "50%";
+                dialogBox.style.transform = "translate(-50%, -50%)";
+                dialogBox.style.padding = "20px";
+                dialogBox.style.backgroundColor = "#f0f0f0";
+                dialogBox.style.border = "1px solid #ccc";
+                dialogBox.style.borderRadius = "20px";
+                dialogBox.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.3)";
+                dialogBox.style.zIndex = "9999";
+                dialogBox.style.textAlign = "center";
+
+                var dialogContent = document.createElement("p");
+                dialogContent.textContent =
+                    "لاحظنا أنك تتصفح من الديسكتوب يفضل فتح المتجر على الهاتف المحمول عند التسوق.";
+
+                dialogContent.style.marginBottom = "20px";
+                dialogBox.appendChild(dialogContent);
+
+                var closeButton = document.createElement("button");
+                closeButton.textContent = "إغلاق";
+                closeButton.style.backgroundColor = "#5e3f89";
+                closeButton.style.color = "white";
+                closeButton.style.border = "none";
+                closeButton.style.padding = "15px 20px";
+                closeButton.style.textDecoration = "none";
+                closeButton.style.display = "inline-block";
+                closeButton.style.fontSize = "16px";
+                closeButton.style.borderRadius = "4px";
+                closeButton.style.cursor = "pointer";
+                closeButton.addEventListener("click", function () {
+                    dialogBox.style.display = "none";
+                });
+
+                dialogBox.appendChild(closeButton);
+                document.body.appendChild(dialogBox);
+
+                // حفظ معلومة في sessionStorage تشير إلى أن الرسالة قد ظهرت بالفعل
+                sessionStorage.setItem("pi_browser_alert_shown", "true");
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
