@@ -1,3 +1,252 @@
+/* Hide Navigation*/
+.woocommerce-MyAccount-navigation {
+display: none;
+}
+
+.wcmtx-my-account-links.wcmtx-grid {
+    display: none;
+}
+
+
+.vendor-customer-registration {
+    display: true !important;
+}
+
+
+/* إخفاء الرسالة عند التحويم بالماوس */
+.nav-dropdown.nav-dropdown-simple  {
+    display: none;
+}
+
+/* إخفاء الكلاسات عند التحويم بالماوس */
+.account-nav.nav.nav-line.nav-uppercase.nav-vertical.mt-half {
+    display: none;
+}
+
+
+#wcfm-main-contentainer .wcfm-collapse .wcfm-container,
+#wcfm-main-contentainer div.wcfm-content {
+    color: #151111;
+	letter-spacing: 0;
+}
+
+
+
+.odd {
+    background-color: #151111; /* تغيير لون الخلفية إلى اللون الداكن الذي تفضله */
+}
+
+.wcfm-membership-wrapper {
+  background:#15202b;
+}
+
+
+.wcfm-store-setup table,
+.wcfm-store-setup table th,
+.wcfm-store-setup table tbody tr td,
+.wcfm-store-setup .banner {
+    font-family: 'Cairo', sans-serif !important;
+    letter-spacing: 0 !important;
+    font-size: 15px !important;
+}
+
+
+.wcfmmp_become_vendor_link {
+    background-color: #e09b4e; /* لون خلفية الزر */
+    color: #fff; /* لون النص */
+    padding: 10px 20px; /* هوامش داخلية */
+  border: none;
+	text-align: center;
+  border-radius: 5px; 
+}
+.wcfmmp_become_vendor_link:hover {
+    background-color: #913ca9;  
+}
+
+.wcfmmp_sold_by_container_advanced .wcfmmp_sold_by_label {
+  color:#e09b4e;
+  font-size:15px;
+  margin-left:60px;
+  letter-spacing:0px;
+  text-transform:uppercase
+}
+
+.wcfmmp_sold_by_container_advanced .wcfmmp_sold_by_wrapper .wcfmmp_sold_by_store a {
+  color:#e09b4e!important
+}
+
+.col.small-12.large-12 {
+    font-size: 16px;
+}
+
+
+.primary.is-small.mb-0.button.product_type_variable.is-shade,
+.primary.is-small.mb-0.button.product_type_variable.add_to_cart_button.is-shade,
+.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-shade {
+    background-color: #913ca9; /* لون الخلفية */
+   color: #fff; /* لون النص */
+   border: none; /* إزالة حدود الزر */
+    border-radius: 5px; /* زوايا مستديرة */
+   font-size: 13px; /* حجم النص */
+    cursor: pointer; /* تغيير شكل المؤشر عند تمريره على الزر */
+}
+
+.primary.is-small.mb-0.button.product_type_variable.is-shade:hover,
+.primary.is-small.mb-0.button.product_type_variable.add_to_cart_button.is-shade:hover,
+.primary.is-small.mb-0.button.product_type_simple.add_to_cart_button.ajax_add_to_cart.is-shade:hover {
+    background-color: #e09b4e; /* لون الخلفية عند تمرير المؤشر */
+}
+
+.copyright-footer {
+    font-size: 14px; /* حجم الخط */
+    color: #CCCCCC; /* لون النص */
+    text-align: center; /* محاذاة النص إلى الوسط */
+}
+
+
+.quantity.buttons_added.form-flat  {
+    background-color: #e09b4e; /* لون الزر */
+    color: #000; /* لون النص */
+    font-size: 16px; /* حجم النص */
+    border-radius: 5px; 
+
+}
+
+.message-container.container.success-color.medium-text-center {
+    color: #000; /* لون النص في الرسالة */
+    border: 1px solid #000; /* حدود للرسالة */
+    border-radius: 10px; /* زوايا المربع */
+    text-align: center; /* محاذاة النص إلى الوسط */
+	font-size : 17px;
+}
+	
+.wc-empty-cart-message {
+    color: #fff; /* لون النص */
+    border-radius: 5px; /* زاوية الزر */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* ظل الزر */
+    text-align: center; /* مركز النص أفقيًا */
+}
+	
+
+.message-container.container.success-color.medium-text-center {
+	   background-color: #01aaff; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border-radius: 5px; /* زاوية الزر */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* ظل الزر */
+    text-align: center; /* مركز النص أفقيًا */
+}
+
+
+.message-container.container.alert-color.medium-text-center {
+	
+	  background-color: #CC0033; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border-radius: 5px; /* زاوية الزر */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* ظل الزر */
+    text-align: center; /* مركز النص أفقيًا */
+}
+
+.message-container.container.medium-text-center {
+	background-color: #5e3f89; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border-radius: 5px;
+	  margin: 5px; 
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* ظل الزر */
+    text-align: center; /* مركز النص أفقيًا */
+}
+	
+
+
+.wishlist-button.button.is-outline.circle.icon {
+  display: inline-block;
+  position: relative;
+  border: 2px solid #333; /* لون الحدود */
+  color: #e09b4e; /* لون النص */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &::before {
+  
+    font-size: 18px; /* حجم الرمز */
+   
+  }
+
+  &:hover {
+    background-color: #333; /* تغيير لون الخلفية عند التحويل */
+    color: #fff; /* تغيير لون النص عند التحويل */
+  }
+
+
+}
+
+.mfp-content.off-canvas-cart {
+    background-color: #192734; /* لون خلفية داكن */
+    color: #fff; /* لون نص فاتح */
+    /* أي تخصيصات أخرى */
+}
+
+
+.ux-free-shipping__bar-progress {
+    background-color: #006400; /* لون خلفية أخضر داكن */
+    /* أي تخصيصات أخرى */
+}
+
+#wcfmmp-store .wcfm_store_description {
+	background: #15202b;
+}
+	
+	
+	#orders_details_items_expander .wc-order-totals .label {
+  color: #d5d9e3 !important;
+  text-align: right !important;
+}
+.note.customer-note {
+    color: black;
+}
+
+
+
+
+.woocommerce-MyAccount-content {
+    padding: 20px;
+    background-color: #192734;
+    color: #f0f0f0;
+    font-size: 16px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+}
+
+#wcfmmp-store .policies_area, #wcfmmp-store .reviews_area, #wcfmmp-store .wcfm_store_description {
+    background-color: #192734;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.woocommerce-order-details__title {
+    background-color: #e09b4e;  
+    color: #000; 
+    border-radius: 5px;  
+    display: inline-block; 
+	    font-size: 17px;
+   padding: 10px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.woocommerce-column__title,.order-number,.order-date,.entry-title{
+	
+	background-color: rgba(231, 156, 33, 0.355);  
+    color: #000; 
+    border-radius: 5px;  
+    display: inline-block; 
+	  font-size: 17px;
+   padding: 5px;
+}
+
+
 .search-field.mb-0 {
   
 border-radius: 5px;
@@ -38,18 +287,22 @@ border-radius: 5px;
   background-color: #abebc6
 ;
   color: #000000;
+		border-radius: 5px;
 }
+
 
 .minus.button.is-form {
   background-color: #f1948a;
   color: #000000;
+		border-radius: 5px;
+
 }
 .single_add_to_cart_button.button.alt {
   border-radius: 5px;
 }
 .remove {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #990c0c;
   border-radius: 5px;
   position: relative;
@@ -67,3 +320,86 @@ border-radius: 5px;
 .button.wc-forward {
   border-radius: 5px;
 }
+body {
+  overflow-x: hidden;
+}
+.is-form.expand.button {
+  background-color: #273647;
+  border-radius: 5px;
+}
+
+.button.alt {
+  border-radius: 10px; /* نصف قطر الحدود المستديرة */
+}
+
+/* تخصيص نص "متابعة الطلب" */
+.uppercase.mb-0 {
+    letter-spacing: normal; /* إلغاء التباعد بين الحروف */		
+}
+
+
+
+#wcfm-main-contentainer table.dataTable.display tbody tr.odd td {
+  background-color:#273647;
+}
+
+#wcfm-main-contentainer table tbody td {
+  background-color:#1D2327
+}
+
+.wcfm-action-icon {
+    background-color: #151111; /* تغيير لون الخلفية إلى اللون الداكن الذي تفضله */
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color:#f2e3e3;
+}
+
+.wcfm_dashboard_notification {
+    color: #ffffff; /* تغيير لون النص إلى اللون الأبيض */
+}
+
+.wcfm_welcomebox_header {
+  background:#e09b4e;
+}
+
+.wcfm_dashboard_stats_block {
+    background-color: #151111; /* تغيير لون الخلفية إلى اللون الداكن الذي تفضله */
+}
+
+.uppercase {
+    color: white;
+}
+
+.cart-popup-inner.inner-padding {
+    color: #F5F5F5; /* يجعل النص أبيض */
+}
+
+
+.woocommerce-Price-amount.amount {
+		color:#f5f5f5;
+}
+
+
+.breadcrumbs.flex-row.flex-row-start.checkout-breadcrumbs.text-left.medium-text-center.is-large.uppercase {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #333;
+  font-size: 18px;
+		  background-color: #e09b4e; /* لون الخلفية الداكنة */
+		  border-radius: 5px; 
+  margin: 5px; 
+}
+  @media screen and (max-width: 600px) {
+    // تحسينات إضافية للشاشات الصغيرة
+	
+	
+.wcfm_membership_box_foot{
+  color: #f0f0f0 ;
+      }
+	
