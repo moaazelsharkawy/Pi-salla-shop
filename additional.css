@@ -398,8 +398,24 @@ body {
   @media screen and (max-width: 600px) {
     // تحسينات إضافية للشاشات الصغيرة
 	
-	
+#wcfmmp-store ins {
+      background-color: transparent !important;
+    }
+		
+		#wcfmmp-store ins {
+  background-color: transparent !important;
+}
+
+
 .wcfm_membership_box_foot{
   color: #f0f0f0 ;
       }
+		
+.wcfm-membership-wrapper .wc-progress-steps li.done, .wcfm-membership-wrapper .wc-progress-steps li.active, .wcfm-membership-wrapper .wc-progress-steps li.done::before, .wcfm-membership-wrapper .wc-progress-steps li.active::before{ 
+	border-color: #0e5b28;
+}
+
+.button.wp-media-buttons.icon::after {
+  color: black;
+}
 	
