@@ -1,3 +1,136 @@
+#wcfmmp-store ins {
+      background-color: transparent !important;
+    }
+		
+		#wcfmmp-store ins {
+  background-color: transparent !important;
+}
+
+
+.wcfm_membership_box_foot{
+  color: #f0f0f0 ;
+      }
+		
+.wcfm-membership-wrapper .wc-progress-steps li.done, .wcfm-membership-wrapper .wc-progress-steps li.active, .wcfm-membership-wrapper .wc-progress-steps li.done::before, .wcfm-membership-wrapper .wc-progress-steps li.active::before{ 
+	border-color: #0e5b28;
+}
+
+.wp-media-buttons .insert-media .media-button-icon::after {
+  color: black;
+}
+
+.lft.left_sidebar.widget-area.sidebar{
+  font-size: 16px;
+	border-radius: 8px; 
+
+}
+
+.verification_noprompt { color: #D5DEE6; }
+.verification_approve { color: #33691e; }
+.verification_pending { color: #fbc02d; }
+.verification_reject { color: #e64a19; }
+
+.wcfm_user_usage_stat_limit {
+  color: #d2d5d7;
+}
+.wcfm_dashboard_item_title {
+    color: cyan;
+}
+
+#wcfm-main-contentainer div.wcfm-content {
+		color: #151111;}
+
+.support_ticket_date {
+		color: #ffffff;}
+.support_ticket_reply_author,.support_ticket_content_order,.support_ticket_content_order_title,.support_ticket_status,.wcfm_dashboard_item_title,.support_ticket_content_category,.support_ticket_content_category_title,.support_ticket_content{
+    color: #bda7e3;
+    letter-spacing: 0;
+}
+.wcfmfa.fa-user {
+    color: #ffcc00;
+}
+
+.cwmm-chat-box {
+    position: fixed;
+    top: 75%;
+    right: -50%; 
+    transform: translate(80%, -50%);
+}
+
+.woocommerce-Price-amount.amount {
+    color: #DD9933 !important;
+}
+
+.categories_list {
+  list-style: none;
+  padding: 0;
+}
+
+.categories_list li {
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.categories_list li:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.woocommerce-Price-currencySymbol {
+  color: #e09b4e !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #e09b4e;
+  background-color: #f0f0f0;
+}
+
+.overlay {
+    background-color: #363859 !important;
+}
+
+.woocommerce-button.button.wcfm-refund-action,
+.woocommerce-button.button.wcfm-support-action,
+.woocommerce-button.button.view {
+    border-radius: 5px;
+}
+
+
+.easy-notification-bar,
+.easy-notification-bar--align_right,
+.easy-notification-bar--collapsible,
+
+.easy-notification-bar-button{
+  border-radius: 25px;
+}
+
+.wcfm-collapse-content {
+	background-color: #192734;
+}
+
+
+.wcfm-collapse {
+	background-color: #192734;
+}
+
+
+.header-button {
+    font-size: 20px;
+}
+
+.wcfmmp-store-rating {
+    position: relative;
+    left: -45px;
+}
+
+#part2
+
 /* Hide Navigation*/
 .woocommerce-MyAccount-navigation {
 display: none;
@@ -26,10 +159,10 @@ display: none;
 
 #wcfm-main-contentainer .wcfm-collapse .wcfm-container,
 #wcfm-main-contentainer div.wcfm-content {
-    color: #151111;
+    color: #d7c8c8;
 	letter-spacing: 0;
+	background-color: #192734;
 }
-
 
 
 .odd {
@@ -392,30 +525,17 @@ body {
   color: #333;
   font-size: 18px;
 		  background-color: #e09b4e; /* لون الخلفية الداكنة */
+	
+	
 		  border-radius: 5px; 
   margin: 5px; 
 }
   @media screen and (max-width: 600px) {
     // تحسينات إضافية للشاشات الصغيرة
 	
-#wcfmmp-store ins {
-      background-color: transparent !important;
-    }
-		
-		#wcfmmp-store ins {
-  background-color: transparent !important;
-}
 
 
-.wcfm_membership_box_foot{
-  color: #f0f0f0 ;
-      }
-		
-.wcfm-membership-wrapper .wc-progress-steps li.done, .wcfm-membership-wrapper .wc-progress-steps li.active, .wcfm-membership-wrapper .wc-progress-steps li.done::before, .wcfm-membership-wrapper .wc-progress-steps li.active::before{ 
-	border-color: #0e5b28;
-}
 
-.button.wp-media-buttons.icon::after {
-  color: black;
-}
-	
+
+
+
