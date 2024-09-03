@@ -1,0 +1,275 @@
+/* تعديل حدود الأزرار */
+.yith-wapo-addon.yith-wapo-addon-type-number.default-closed.toggle-closed,
+.yith-wapo-addon.yith-wapo-addon-type-textarea.default-closed.toggle-closed {
+    border-radius: 5px;
+}
+
+/* تحديد موقع عنوان الإضافة */
+.wapo-addon-title.toggle-closed {
+    position: relative;
+    right: 5px;
+    top: 5px;
+}
+
+/* تخصيص رمز في رابط المحفظة */
+.woocommerce-MyAccount-navigation > ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before {
+    font-family: 'woowallet' !important;
+    content: "\e900";
+}
+
+/* تخصيص الشاشة الصغيرة (الموبايل) */
+@media only screen and (max-width: 767px) {
+
+.mfn-li-product-row-button a.button {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+	
+ .woo-wallet-withdrawal-detals {
+        width: 100%;
+        overflow-x: auto; /* إضافة شريط تمرير أفقي إذا لزم الأمر */
+    }
+    
+    .woo-wallet-withdrawal-detals th,
+    .woo-wallet-withdrawal-detals td {
+        display: block; /* تحويل العناصر إلى كتل لتناسب العرض */
+        width: 100%; /* جعل عرض الخلايا 100% لملاءمة المحتوى */
+        box-sizing: border-box; /* التأكد من أن padding و border لا تؤثر على العرض */
+        padding: 10px; /* ضبط padding حسب الحاجة */
+        text-align: right; /* ضبط المحاذاة لنصوص الجدول */
+    }
+    
+    .woo-wallet-withdrawal-detals thead {
+        display: none; /* إخفاء رأس الجدول إذا كان يحجب المحتوى */
+    }
+    
+    .woo-wallet-withdrawal-detals tr {
+        margin-bottom: 10px; /* إضافة مسافة بين الصفوف */
+        display: block; /* تحويل الصفوف إلى كتل لتناسب العرض */
+    }	
+	
+  .woo-wallet-withdrawal-detals tr:nth-child(odd) {
+        background-color: #f9f9f9; /* خلفية باهتة للصفوف الفردية */
+    }
+
+    .woo-wallet-withdrawal-detals tr:nth-child(even) {
+        background-color: #ffffff; /* خلفية بيضاء للصفوف الزوجية */
+    }	
+	
+    /* تعديل المسافة على اليمين في الطلب */
+    .mfn-be-checkout .woocommerce:not(.mfn-cart-tmpl-builder) #order_review {
+        margin-right: 5px !important;
+    }
+
+    /* تغيير حجم النص */
+    .woocommerce-Price-amount {
+        font-size: 15px !important;
+        font-weight: bold !important;
+    }
+
+    /* تعديل موقع إدخال القسيمة */
+    .woocommerce table.cart td.actions .coupon #coupon_code {
+        position: relative;
+        right: -17px;
+        letter-spacing: -0.05em;
+    }
+
+    /* تعديل موقع زر تحديث السلة */
+    .woocommerce-page table.cart td.actions .button[name="update_cart"] {
+        position: relative;
+        right: -9px;
+    }
+
+    /* تخصيص النص داخل الكلاس variation */
+    .variation {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* تنظيم محتويات الكلاس .style-simple */
+    .style-simple table:not(.recaptchatable) tr:first-child td {
+        text-align: right;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #8954e7;
+    }
+
+    /* إزالة تأثير float من .woocommerce td.product-name dl.variation dd */
+    .woocommerce td.product-name dl.variation dd {
+        float: none;
+        text-align: right;
+        margin-left: 10px;
+    }
+
+    /* ضمان لف النص في الجداول */
+    .woocommerce-table.woocommerce-table--custom-fields.shop_table.custom-fields {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        table-layout: fixed;
+    }
+
+    /* ضمان لف النص داخل الأعمدة */
+    .woocommerce-table.woocommerce-table--custom-fields.shop_table.custom-fields td {
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    /* تعديل حجم النص داخل الكلاس .woocommerce table.shop_table td.product-name */
+    .woocommerce table.shop_table td.product-name {
+        font-size: 11px;
+        text-align: right;
+        padding: 3px;
+    }
+
+    /* تصغير حجم النص داخل الكلاسات woocommerce-table__product-name و product-name */
+    .woocommerce-table__product-name,
+    .product-name {
+        font-size: 12px !important;
+    }
+
+    /* تصغير حجم النص داخل الكلاس wcfm_dashboard_item_title */
+    .wcfm_dashboard_item_title {
+        font-size: 12px;
+        text-align: right;
+    }
+
+}
+
+.woocommerce table.shop_table td.product-name > a {
+    font-size: 15px; 
+}
+
+.woocommerce table.my_account_orders .button {
+    margin-bottom: 5px; 
+}
+
+#bacs_sort_code,
+#bacs_bank_name,
+#bacs_bank_routing_number,
+#bacs_bank_iban,
+#bacs_bank_swift_code {
+    display: none;
+}
+
+
+/* تخصيص أيقونة لعنصر "Wordfence 2FA" */
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--wordfence-2fa a::before {
+    font-family: 'FontAwesome' !important; /* تأكد من استخدام العائلة الصحيحة للأيقونات */
+    content: "\f007"; /* رمز Font Awesome للأيقونة المطلوبة - يمكنك تغييره إلى الرمز المناسب */
+}
+
+.wcfmmp_shipment_processing_display {
+  font-style: normal; 
+  padding-top: 15px; 
+}
+#wcfmmp-store .left_sidebar,
+#wcfmmp-stores-lists .left_sidebar {
+  background:#F9FAEE !important;
+}
+.mfn-wish-button {
+  padding-left: 25px !important;
+}
+
+#wcfm-main-contentainer div.wcfm-collapse-content h2 {
+	font-style: normal;
+	margin-right: 10px;
+padding-left: 120px;
+}
+
+
+#wcfm-main-contentainer .wcfm_membership_box_head {
+  background-color: #800080 !important;
+}
+
+
+
+p.wcfm_title strong,
+span.wcfm_title strong {
+  font-style: normal;
+}
+
+.wcfm-collapse .wcfm-container {
+  border-radius: 10px; 
+}
+
+.inquiry_content_for {
+  float: none !important;
+}
+
+.woocommerce-MyAccount-content #wcfm-main-contentainer .wcfm-collapse {
+  background-color: #F9FAEE;
+border-radius: 20px;
+
+}
+.inquiry_reply_author {
+  text-align: right !important;
+}
+.inquiry_date {
+  font-weight: bold;
+}
+
+.mfn-li-product-row.mfn-li-product-row-button.show-button.button-1 {
+    padding-left: 6px;  
+    padding-right: 6px;
+}
+
+.mfn-woo-product-title {
+    font-size: 18px; 
+    padding: 0 !important; 
+}
+.mfn-li-product-row-button a.button {
+
+font-size: 14px;
+  font-weight: bold;
+
+}
+
+
+
+.image_frame {
+    border-radius: 5px; 
+}
+
+
+
+ #wcfm-main-contentainer .wcfm_membership_thankyou_content_wrapper{
+background-color: #F9FAEE !important; 
+}
+
+.wc-progress-steps {
+  font-weight: bold !important; 
+}
+
+.mfn-wish-button.tooltip.tooltip-txt.link {
+  display: none;
+}
+
+.wc-setup-content h1{
+font-size: 22px;
+}
+.wcfm-store-setup .wc-setup-actions .wcfm_submit_button {
+  color: #fff !important; 
+  background-color: #673AB7;
+  margin-top: -10px; 
+text-shadow: none;
+  font-weight: bold;
+
+}
+
+.woocommerce-tracker {
+  text-align: right !important; 
+}
+
+.wc-setup-content {
+	
+  border-radius: 5px;
+}
+
+#wcfm-main-contentainer .wcfm_membership_box_head{
+  border-color: #fbd3b0;
+}
+
+
+#wcfm-main-contentainer .wcfm_membership_box_head .wcfm_membership_price_description {
+  color: #fff;
+}
