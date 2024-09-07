@@ -20,12 +20,52 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
-.mfn-li-product-row-button a.button {
-  padding-left: 17px;
-  padding-right: 17px;
+
+	
+	.woocommerce-table__product-table.product-total,.product-total{
+    text-align: left !important;
+}
+
+	
+.woocommerce table.shop_table th:first-child {
+  text-align: right !important;
 }
 	
- .woo-wallet-withdrawal-detals {
+woocommerce .woocommerce-order-details :last-child {
+  padding-left: initial;
+}	
+	
+    /* تخصيص جدول المحتويات في WCFM */
+    #wcfm-main-contentainer table td {
+        padding: 0px !important;
+    }
+    
+    .style-simple table:not(.recaptchatable) th {
+        padding-right: 1px;
+        padding-left: 1px;
+        text-align: right;
+    }
+
+    .wcfmfa {
+        font-weight: 900 !important;
+        padding-top: 6px;
+    }
+    
+    .cwmm-chat-box.icons-view-vertical.position-right {
+        padding-bottom: 25px;
+        margin-left: 20px;
+    }
+    
+    .mfn-cart-holder .mfn-ch-content .mfn-ch-product .mfn-chp-image a img {
+        margin-left: 5px;
+    }
+    
+    .mfn-li-product-row-button a.button {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    
+    .woo-wallet-withdrawal-detals {
         width: 100%;
         overflow-x: auto; /* إضافة شريط تمرير أفقي إذا لزم الأمر */
     }
@@ -46,16 +86,16 @@
     .woo-wallet-withdrawal-detals tr {
         margin-bottom: 10px; /* إضافة مسافة بين الصفوف */
         display: block; /* تحويل الصفوف إلى كتل لتناسب العرض */
-    }	
-	
-  .woo-wallet-withdrawal-detals tr:nth-child(odd) {
+    }    
+    
+    .woo-wallet-withdrawal-detals tr:nth-child(odd) {
         background-color: #f9f9f9; /* خلفية باهتة للصفوف الفردية */
     }
 
     .woo-wallet-withdrawal-detals tr:nth-child(even) {
         background-color: #ffffff; /* خلفية بيضاء للصفوف الزوجية */
-    }	
-	
+    }    
+    
     /* تعديل المسافة على اليمين في الطلب */
     .mfn-be-checkout .woocommerce:not(.mfn-cart-tmpl-builder) #order_review {
         margin-right: 5px !important;
@@ -132,8 +172,9 @@
         font-size: 12px;
         text-align: right;
     }
-
 }
+
+/* تخصيص التنسيق الخارجي */
 
 .woocommerce table.shop_table td.product-name > a {
     font-size: 15px; 
@@ -151,61 +192,74 @@
     display: none;
 }
 
-
-/* تخصيص أيقونة لعنصر "Wordfence 2FA" */
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--wordfence-2fa a::before {
-    font-family: 'FontAwesome' !important; /* تأكد من استخدام العائلة الصحيحة للأيقونات */
-    content: "\f007"; /* رمز Font Awesome للأيقونة المطلوبة - يمكنك تغييره إلى الرمز المناسب */
+    font-family: 'mfn-icons' !important; 
+    content: "\e8aa" !important;
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--inquiry a::before {
+    font-family: 'mfn-icons' !important;
+    content: "\e8a5" !important;
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--support-tickets a::before {
+    font-family: 'mfn-icons' !important;
+    content: "\e89c" !important; 
+}
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--followings a::before {
+    font-family: 'mfn-icons' !important;
+    content: "\e84e" !important; 
 }
 
 .wcfmmp_shipment_processing_display {
-  font-style: normal; 
-  padding-top: 15px; 
+    font-style: normal; 
+    padding-top: 15px; 
 }
+
 #wcfmmp-store .left_sidebar,
 #wcfmmp-stores-lists .left_sidebar {
-  background:#F9FAEE !important;
+    background: #F9FAEE !important;
 }
+
 .mfn-wish-button {
-  padding-left: 25px !important;
+    padding-left: 25px !important;
 }
 
 #wcfm-main-contentainer div.wcfm-collapse-content h2 {
-	font-style: normal;
-	margin-right: 10px;
-padding-left: 120px;
+    font-style: normal;
+    margin-right: 10px;
+    padding-left: 120px;
 }
-
 
 #wcfm-main-contentainer .wcfm_membership_box_head {
-  background-color: #800080 !important;
+    background-color: #673AB7 !important;
 }
-
-
 
 p.wcfm_title strong,
 span.wcfm_title strong {
-  font-style: normal;
+    font-style: normal;
 }
 
 .wcfm-collapse .wcfm-container {
-  border-radius: 10px; 
+    border-radius: 10px; 
 }
 
 .inquiry_content_for {
-  float: none !important;
+    float: none !important;
 }
 
 .woocommerce-MyAccount-content #wcfm-main-contentainer .wcfm-collapse {
-  background-color: #F9FAEE;
-border-radius: 20px;
+    background-color: #F9FAEE;
+    border-radius: 20px;
+}
 
-}
 .inquiry_reply_author {
-  text-align: right !important;
+    text-align: right !important;
 }
+
 .inquiry_date {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .mfn-li-product-row.mfn-li-product-row-button.show-button.button-1 {
@@ -217,59 +271,78 @@ border-radius: 20px;
     font-size: 18px; 
     padding: 0 !important; 
 }
+
 .mfn-li-product-row-button a.button {
-
-font-size: 14px;
-  font-weight: bold;
-
+    font-size: 14px;
+    font-weight: bold;
 }
-
-
 
 .image_frame {
     border-radius: 5px; 
 }
 
-
-
- #wcfm-main-contentainer .wcfm_membership_thankyou_content_wrapper{
-background-color: #F9FAEE !important; 
+#wcfm-main-contentainer .wcfm_membership_thankyou_content_wrapper {
+    background-color: #F9FAEE !important; 
 }
 
 .wc-progress-steps {
-  font-weight: bold !important; 
+    font-weight: bold !important; 
 }
 
 .mfn-wish-button.tooltip.tooltip-txt.link {
-  display: none;
+    display: none;
 }
 
-.wc-setup-content h1{
-font-size: 22px;
+.wc-setup-content h1 {
+    font-size: 22px;
 }
+
 .wcfm-store-setup .wc-setup-actions .wcfm_submit_button {
-  color: #fff !important; 
-  background-color: #673AB7;
-  margin-top: -10px; 
-text-shadow: none;
-  font-weight: bold;
-
+    color: #fff !important; 
+    background-color: #673AB7;
+    margin-top: -10px; 
+    text-shadow: none;
+    font-weight: bold;
 }
 
 .woocommerce-tracker {
-  text-align: right !important; 
+    text-align: right !important; 
 }
 
 .wc-setup-content {
-	
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
-#wcfm-main-contentainer .wcfm_membership_box_head{
-  border-color: #fbd3b0;
+#wcfm-main-contentainer .wcfm_membership_box_head {
+    border-color: #fbd3b0;
 }
-
 
 #wcfm-main-contentainer .wcfm_membership_box_head .wcfm_membership_price_description {
-  color: #fff;
+    color: #fff;
+}
+
+.woocommerce-enquiry-table__cell.woocommerce-enquiry-table__cell-enquiry-no {
+    text-align: right; 
+}
+
+.mfn-cart-holder .mfn-ch-content .mfn-ch-product .mfn-chp-image a img {
+    border-radius: 10px !important; 
+}
+
+.mfn-cart-holder .mfn-ch-footer .mfn-ch-footer-buttons a:not(.button) {
+    color: #800080;
+    font-weight: bold;
+}
+
+.mfn-woo-cart-link, a:hover.mfn-woo-cart-link {
+    font-weight: bold;
+}
+
+.style-simple table:not(.recaptchatable) tr:last-child th {
+  text-align: right;
+}
+
+
+.woocommerce table.shop_table tbody tr:last-child td{
+  text-align: right;
 }
