@@ -21,6 +21,7 @@
 @media only screen and (max-width: 767px) {
 
 
+
 .style-simple .ui-tabs .ui-tabs-nav li {
   display: inline-flex;
 	}	
@@ -429,4 +430,14 @@ font-family: inherit;
 
 .woo_wallet_withdrawal_payment_submit, .woocommerce input.button {
     font-family: inherit;
+}
+
+.wallet_input_group_addon {
+
+  display: inherit !important; 
+}
+
+.ui-widget input{
+  font-family: cairo;
+  width: fit-content;
 }
