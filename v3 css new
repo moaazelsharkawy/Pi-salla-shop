@@ -420,4 +420,13 @@ table.shop_table th:first-child {
     border: none !important; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+font-family: inherit;
+}
+
+.woocommerce-info {
+  border-radius: 7px;
+}
+
+.woo_wallet_withdrawal_payment_submit, .woocommerce input.button {
+    font-family: inherit;
 }
