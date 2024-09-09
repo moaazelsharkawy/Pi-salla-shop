@@ -19,9 +19,81 @@
 
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
+		
 
 	
 	
+.woocommerce-OrderUpdate-inner {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+   width: 100%; 
+	}
+
+.comment_container {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+   width: 100%; 
+	}
+	
+	
+	
+	
+.woocommerce-orders-table__cell {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.woocommerce-orders-table__cell-order-number {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.woocommerce-orders-table__row {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.woocommerce-orders-table__row--status-completed {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+}
+
+.woocommerce-orders-table__row--status-canceled {
+    background-color: #f0f0f0;
+    border-color: #dcdcdc;
+    color: #888;
+}
+
+.woocommerce-orders-table__row--status-refunded {
+    background-color: #f9d6d5;
+    border-color: #f5c6c6;
+    color: #d9534f;
+}
+
+.woocommerce-orders-table__row:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
 	
 	
 	.variation {
@@ -122,12 +194,25 @@ woocommerce .woocommerce-order-details :last-child {
         padding: 5px !important;
     }
     
-    .style-simple table:not(.recaptchatable) th {
-     padding-right: 1px;
-        padding-left: 1px;   
-        text-align: right;
-    }
+.style-simple table:not(.recaptchatable) th {
+    background-color: #f4f4f4;
+    color: #333;
+ padding-right: 1px;
+	 padding-left: 1px;
+	 border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    text-align: right;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
 
+.style-simple table:not(.recaptchatable) th:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+	
     .wcfmfa {
         font-weight: 900 !important;
         padding-top: 6px;
@@ -531,49 +616,48 @@ font-family: inherit;
   font-weight: bold;
 }
 
-.woocommerce-orders-table__row {
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-}
-
-.woocommerce-orders-table__row--status-completed {
-  background-color: #dff0d8; /* لون خلفية للحالة المكتملة */
-  border-color: #d0e9c6;
-}
-
-.woocommerce-orders-table__row--status-canceled {
-  background-color: #f0f0f0; /* لون خلفية للحالة الملغاة */
-  border-color: #dcdcdc;
-  color: #888; /* لون النصوص للحالة الملغاة */
-}
-
-.woocommerce-orders-table__row--status-refunded {
-  background-color: #f9d6d5; /* لون خلفية للحالة المستردة */
-  border-color: #f5c6c6;
-  color: #d9534f; /* لون النصوص للحالة المستردة */
-}
-
-.woocommerce-orders-table__row:hover {
-  background-color: #f1f1f1;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
-}
 
 .order {
   font-size: 14px;
-  color: inherit; /* استخدام اللون الأساسي للتكامل مع خلفية الحالة */
-}
+  color: inherit; 
+}	
+
 
 .order strong {
   font-weight: bold;
   color: inherit; /* استخدام اللون الأساسي للتكامل مع خلفية الحالة */
 }
-	
+.woocommerce-account .woocommerce-MyAccount-content mark {
+  background-color: beige;
+  border-radius: 5px;
+}	
+
+.u-column1.col-1.woocommerce-Address {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.u-column1.col-1.woocommerce-Address h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.u-column1.col-1.woocommerce-Address p {
+    margin: 0;
+    color: #555;
+}
+
+.u-column1.col-1.woocommerce-Address .address-line {
+    margin-bottom: 8px;
+}
+
+.u-column1.col-1.woocommerce-Address .address-line:last-child {
+    margin-bottom: 0;
+}
