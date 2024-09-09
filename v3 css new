@@ -20,8 +20,81 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+	
+	
+	
+	
+	.variation {
+  text-align: center !important;
+}	
+	
+.woocommerce-cart-form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
 
+	
+	
+	
+	
+.woocommerce-order>p {
+  font-size: larger;
+font-weight:bold;
+	}
+	
+.woocommerce ul.order_details li {
+  padding: 15px 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  letter-spacing: normal;
+}
+
+.woocommerce ul.order_details li:hover {
+  background-color: #e6ffe6;
+  border-color: #4caf50;
+  transform: scale(1.02);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.woocommerce ul.order_details li strong {
+  color: #000;
+}
+	
+	
+	
+.style-simple table:not(.recaptchatable) tr:last-child th {
+  text-align: right;
+}
+
+	
+	
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.9) translateX(-10px); 
+	  transition: all 0.3s ease;
+  margin: 3px 0;	
+	}
+
+
+
+
+	
 .style-simple .ui-tabs .ui-tabs-nav li {
   display: inline-flex;
 	}	
@@ -106,7 +179,7 @@ woocommerce .woocommerce-order-details :last-child {
     }    
     
     /* تعديل المسافة على اليمين في الطلب */
-    .mfn-be-checkout .woocommerce:not(.mfn-cart-tmpl-builder) #order_review {
+#order_review {
         margin-right: 5px !important;
     }
 
@@ -141,8 +214,6 @@ woocommerce .woocommerce-order-details :last-child {
         vertical-align: middle;
         font-size: 14px;
         color: #8954e7;
-padding:1px;
-	border: none !important;
 
 	}
 
@@ -354,13 +425,10 @@ span.wcfm_title strong {
     font-weight: bold;
 }
 
-.style-simple table:not(.recaptchatable) tr:last-child th {
-  text-align: right;
-}
-
 
 .woocommerce table.shop_table tbody tr:last-child td,.address{
   text-align: right;
+margin-right: 10px;
 }
 
 table.shop_table th:first-child {
@@ -441,3 +509,71 @@ font-family: inherit;
   font-family: cairo;
   width: fit-content;
 }
+
+.woocommerce-MyAccount-navigation {
+  font-size: 14px;
+}
+
+#order_review_heading {
+  font-weight: bold;
+}
+
+.mfn-header-login, 
+.mfn-header-modal-nav 
+ {
+    border-radius: 10px;
+}
+
+#coupon_code,.input-text {
+  letter-spacing: normal;
+}
+.mfn-checkout-steps {
+  font-weight: bold;
+}
+
+.woocommerce-orders-table__row {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.woocommerce-orders-table__row--status-completed {
+  background-color: #dff0d8; /* لون خلفية للحالة المكتملة */
+  border-color: #d0e9c6;
+}
+
+.woocommerce-orders-table__row--status-canceled {
+  background-color: #f0f0f0; /* لون خلفية للحالة الملغاة */
+  border-color: #dcdcdc;
+  color: #888; /* لون النصوص للحالة الملغاة */
+}
+
+.woocommerce-orders-table__row--status-refunded {
+  background-color: #f9d6d5; /* لون خلفية للحالة المستردة */
+  border-color: #f5c6c6;
+  color: #d9534f; /* لون النصوص للحالة المستردة */
+}
+
+.woocommerce-orders-table__row:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.order {
+  font-size: 14px;
+  color: inherit; /* استخدام اللون الأساسي للتكامل مع خلفية الحالة */
+}
+
+.order strong {
+  font-weight: bold;
+  color: inherit; /* استخدام اللون الأساسي للتكامل مع خلفية الحالة */
+}
+	
