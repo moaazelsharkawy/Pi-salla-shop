@@ -21,38 +21,34 @@
 @media only screen and (max-width: 767px) {
 
 
-	
 .woocommerce table.shop_table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
     background-color: #fff;
-    border-radius: 8px; /* حواف مستديرة */
-    overflow: hidden;
+    border-radius: 8px;
 }
 
 .woocommerce table.shop_table th {
     background-color: #f5f5f5;
-    font-weight: bold;
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 2px solid #ddd; /* خط فاصل أسفل الرأس */
+    font-weight: normal; 
+    padding: 0; 
+    text-align: right;
+    border-bottom: 2px solid #ddd; 
 }
 
 .woocommerce table.shop_table td {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd; /* خط فاصل أسفل الخلايا */
+    border-bottom: 1px solid #ddd;
     color: #333;
 }
 
 /* لون خلفية للصفوف الفردية */
 .woocommerce table.shop_table tr:nth-child(odd) {
-    background-color: #f9f9f9; /* لون مريح للعين */
+    background-color: #f9f9f9;
 }
 
 /* لون خلفية للصفوف الزوجية */
 .woocommerce table.shop_table tr:nth-child(even) {
-    background-color: #ffffff; /* لون مريح للعين */
+    background-color: #ffffff;
 }
 
 /* إزالة الخط الفاصل في الصف الأخير */
@@ -62,13 +58,7 @@
 
 /* تغيير لون الخلفية عند التمرير */
 .woocommerce table.shop_table tr:hover {
-    background-color: #e0e0e0; /* لون مريح عند التمرير */
-}
-
-.woocommerce table.shop_table caption {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    background-color: #e0e0e0; 
 }
 	
 	
@@ -220,34 +210,34 @@
 	.woocommerce-orders-table__row--status-process,
 	.woocommerce-orders-table__row--status-on-hold ,
 	.woocommerce-orders-table__row--status-revision   {
-    background-color: #ffe5b4; 
-    border-color: #ffcc80; 
+    background-color: #ffe5b4 !important;
+    border-color: #ffcc80 !important;
 }
 .woocommerce-orders-table__row--status-pending {
-    background-color: #fff9c4; 
-    border-color: #fff176; 
+    background-color: #fff9c4 !important;
+    border-color: #fff176 !important;
 }	
 	
 .woocommerce-orders-table__row--status-completed {
-    background-color: #dff0d8;
-    border-color: #d0e9c6;
+    background-color: #dff0d8 !important;
+    border-color: #d0e9c6 !important;
 }
 
 .woocommerce-orders-table__row--status-canceled {
-    background-color: #f0f0f0;
-    border-color: #dcdcdc;
+    background-color: #f0f0f0 !important;
+    border-color: #dcdcdc !important;
     color: #888;
 }
 
 .woocommerce-orders-table__row--status-refunded {
-    background-color: #f9d6d5;
-    border-color: #f5c6c6;
-    color: #d9534f;
+    background-color: #f9d6d5 !important;
+    border-color: #f5c6c6 !important;
+    color: #d9534f !important;
 }
 .woocommerce-orders-table__row--status-rebook  {
-    background-color: #fbeae8;
-    border-color: #f7d9d8; 
-    color: #d67b77; 
+    background-color: #fbeae8 !important;
+    border-color: #f7d9d8 !important;
+    color: #d67b77 !important;
 }
 
 	
@@ -832,25 +822,15 @@ font-family: inherit;
 }
 
 
-
 .woocommerce-MyAccount-content {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 5px;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
-.woocommerce-MyAccount-content h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
 
-.woocommerce-MyAccount-content p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
 
 .woocommerce-MyAccount-content a {
     color: #0073aa;
@@ -870,7 +850,7 @@ font-family: inherit;
 
 .woocommerce-MyAccount-content table th,
 .woocommerce-MyAccount-content table td {
-    text-align: left;
+    text-align: right;
     border-bottom: 1px solid #ddd;
 }
 
@@ -888,7 +868,6 @@ font-family: inherit;
     color: #fff;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -897,7 +876,8 @@ font-family: inherit;
     background-color: #005f8d;
 }
 
-.woo-wallet-sidebar ul li.card{
-  background: color-mix !important;
-  border-radius: 10px;
+
+.woo-wallet-sidebar ul li.card {
+    background: color-mix !important;
+    border-radius: 10px;
 }
