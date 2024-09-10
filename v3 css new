@@ -897,3 +897,25 @@ font-family: inherit;
     }
 }
 
+.support-priority-normal,.support-priority-low {
+  background-color: lightsteelblue !important;
+}
+
+.support-priority-critical {
+  background-color: #39225A;
+}
+.support-priority-urgent {
+  background-color: #855FB1;
+}
+.support-priority-high {
+  background-color: #C499EF;
+}
+
+.mce-toolbar .mce-ico {
+  color: beige !important;
+  
+}
+
+#mceu_13 {
+    display: none !important;
+}
