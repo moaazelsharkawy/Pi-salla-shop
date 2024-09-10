@@ -21,7 +21,12 @@
 @media only screen and (max-width: 767px) {
 		
 
-	
+
+	.mfn-header-login, 
+.mfn-header-modal-nav 
+ {
+    border-radius: 0px !important;
+}
 	
 .woocommerce-OrderUpdate-inner {
     padding: 20px;
@@ -43,7 +48,52 @@
     margin-bottom: 15px;
    width: 100%; 
 	}
+
 	
+	.dataTables_wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.dataTables_wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataTables_wrapper table th, 
+.dataTables_wrapper table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.dataTables_wrapper table th {
+    background-color: #f4f4f4;
+    color: #007bff;
+}
+
+.dataTables_wrapper table td {
+    background-color: #ffffff;
+    color: #333;
+}
 	
 	
 	
@@ -71,6 +121,21 @@
     transition: all 0.3s ease;
 }
 
+.woocommerce-orders-table__row--status-processing,
+	.woocommerce-orders-table__row--status-shipped,
+	.woocommerce-orders-table__row--status-prepair,
+	.woocommerce-orders-table__row--status-process,
+	.woocommerce-orders-table__row--status-process,
+	.woocommerce-orders-table__row--status-on-hold ,
+	.woocommerce-orders-table__row--status-revision   {
+    background-color: #ffe5b4; 
+    border-color: #ffcc80; 
+}
+.woocommerce-orders-table__row--status-pending {
+    background-color: #fff9c4; 
+    border-color: #fff176; 
+}	
+	
 .woocommerce-orders-table__row--status-completed {
     background-color: #dff0d8;
     border-color: #d0e9c6;
@@ -87,7 +152,13 @@
     border-color: #f5c6c6;
     color: #d9534f;
 }
+.woocommerce-orders-table__row--status-rebook  {
+    background-color: #fbeae8;
+    border-color: #f7d9d8; 
+    color: #d67b77; 
+}
 
+	
 .woocommerce-orders-table__row:hover {
     background-color: #f1f1f1;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
@@ -660,4 +731,17 @@ font-family: inherit;
 
 .u-column1.col-1.woocommerce-Address .address-line:last-child {
     margin-bottom: 0;
+}
+
+.dashicons{
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  color: blueviolet;
+}
+
+.woo-wallet-sidebar ul li.card,.woo-wallet-my-wallet-container .woo-wallet-sidebar {
+
+  background: color-mix !important; 
+  border-radius: 10px;
 }
