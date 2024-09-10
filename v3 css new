@@ -1,14 +1,17 @@
+/* تعديل حدود الأزرار */
 .yith-wapo-addon.yith-wapo-addon-type-number.default-closed.toggle-closed,
 .yith-wapo-addon.yith-wapo-addon-type-textarea.default-closed.toggle-closed {
     border-radius: 5px;
 }
 
+/* تحديد موقع عنوان الإضافة */
 .wapo-addon-title.toggle-closed {
     position: relative;
     right: 5px;
     top: 5px;
 }
 
+/* تخصيص رمز في رابط المحفظة */
 .woocommerce-MyAccount-navigation > ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before {
     font-family: 'woowallet' !important;
     content: "\e900";
@@ -16,13 +19,82 @@
 
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
-		
 
+
+	
+.woocommerce table.shop_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* حواف مستديرة */
+    overflow: hidden;
+}
+
+.woocommerce table.shop_table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd; /* خط فاصل أسفل الرأس */
+}
+
+.woocommerce table.shop_table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd; /* خط فاصل أسفل الخلايا */
+    color: #333;
+}
+
+/* لون خلفية للصفوف الفردية */
+.woocommerce table.shop_table tr:nth-child(odd) {
+    background-color: #f9f9f9; /* لون مريح للعين */
+}
+
+/* لون خلفية للصفوف الزوجية */
+.woocommerce table.shop_table tr:nth-child(even) {
+    background-color: #ffffff; /* لون مريح للعين */
+}
+
+/* إزالة الخط الفاصل في الصف الأخير */
+.woocommerce table.shop_table tr:last-child td {
+    border-bottom: none;
+}
+
+/* تغيير لون الخلفية عند التمرير */
+.woocommerce table.shop_table tr:hover {
+    background-color: #e0e0e0; /* لون مريح عند التمرير */
+}
+
+.woocommerce table.shop_table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+	
+	
+	
+.woocommerce-customer-details address::before {
+  left: 20px!important;
+}	
+	
+	
+.style-simple table:not(.recaptchatable) tr td:last-child, .style-simple table tr th:last-child {
+  border: none;
+}
+	
+	
+	#wcfm_cus_add_note {
+    display: inline-block;
+    width: 200px; 
+}
+
+	#wcfm_cus_note_submit {
+    float: right;
+}
 	
 .woo-wallet-content {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px 0;
     color: #333;
@@ -39,7 +111,10 @@
 .woo-wallet-content p {
     margin-bottom: 15px;
 }
-		
+
+
+	
+	
 
 	.mfn-header-login, 
 .mfn-header-modal-nav 
@@ -72,10 +147,8 @@
 	.dataTables_wrapper {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 15px 0;
-    font-family: 'Arial', sans-serif;
     color: #333;
 }
 
@@ -197,6 +270,10 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
+
+
+	
+	
 	
 	
 .woocommerce-order>p {
@@ -248,6 +325,9 @@ font-weight:bold;
 	  transition: all 0.3s ease;
   margin: 3px 0;	
 	}
+
+
+
 
 	
 .style-simple .ui-tabs .ui-tabs-nav li {
@@ -382,7 +462,7 @@ woocommerce .woocommerce-order-details :last-child {
         vertical-align: middle;
         font-size: 14px;
         color: #8954e7;
-
+border: none;
 	}
 
     /* إزالة تأثير float من .woocommerce td.product-name dl.variation dd */
@@ -719,7 +799,6 @@ font-family: inherit;
     padding: 15px;
     border-radius: 8px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.6;
@@ -752,8 +831,73 @@ font-family: inherit;
   color: blueviolet;
 }
 
-.woo-wallet-sidebar ul li.card,.woo-wallet-my-wallet-container .woo-wallet-sidebar {
 
-  background: color-mix !important; 
+
+.woocommerce-MyAccount-content {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.woocommerce-MyAccount-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.woocommerce-MyAccount-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.woocommerce-MyAccount-content a {
+    color: #0073aa;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.woocommerce-MyAccount-content a:hover {
+    color: #005f8d;
+}
+
+.woocommerce-MyAccount-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.woocommerce-MyAccount-content table th,
+.woocommerce-MyAccount-content table td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-MyAccount-content table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.woocommerce-MyAccount-content table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.woocommerce-MyAccount-content button {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.woocommerce-MyAccount-content button:hover {
+    background-color: #005f8d;
+}
+
+.woo-wallet-sidebar ul li.card{
+  background: color-mix !important;
   border-radius: 10px;
 }
