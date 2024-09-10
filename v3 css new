@@ -1,17 +1,14 @@
-/* تعديل حدود الأزرار */
 .yith-wapo-addon.yith-wapo-addon-type-number.default-closed.toggle-closed,
 .yith-wapo-addon.yith-wapo-addon-type-textarea.default-closed.toggle-closed {
     border-radius: 5px;
 }
 
-/* تحديد موقع عنوان الإضافة */
 .wapo-addon-title.toggle-closed {
     position: relative;
     right: 5px;
     top: 5px;
 }
 
-/* تخصيص رمز في رابط المحفظة */
 .woocommerce-MyAccount-navigation > ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before {
     font-family: 'woowallet' !important;
     content: "\e900";
@@ -21,6 +18,28 @@
 @media only screen and (max-width: 767px) {
 		
 
+	
+.woo-wallet-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.woo-wallet-content h1, 
+.woo-wallet-content h2, 
+.woo-wallet-content h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.woo-wallet-content p {
+    margin-bottom: 15px;
+}
+		
 
 	.mfn-header-login, 
 .mfn-header-modal-nav 
@@ -178,10 +197,6 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-
-
-	
-	
 	
 	
 .woocommerce-order>p {
@@ -233,9 +248,6 @@ font-weight:bold;
 	  transition: all 0.3s ease;
   margin: 3px 0;	
 	}
-
-
-
 
 	
 .style-simple .ui-tabs .ui-tabs-nav li {
