@@ -850,7 +850,6 @@ font-family: inherit;
 
 .woocommerce-MyAccount-content table th,
 .woocommerce-MyAccount-content table td {
-    text-align: right;
     border-bottom: 1px solid #ddd;
 }
 
@@ -881,3 +880,20 @@ font-family: inherit;
     background: color-mix !important;
     border-radius: 10px;
 }
+
+.woocommerce .woocommerce-customer-details .woocommerce-column__title {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.wfls-flex-row .wfls-flex-item-full-width {
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) { /* يحدد الشاشات الأكبر من الموبايل */
+    .mfn-cart-holder .mfn-ch-content .mfn-ch-product .mfn-chp-price {
+        margin: 0;
+    }
+}
+
