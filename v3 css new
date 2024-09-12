@@ -20,7 +20,12 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
-
+/* قابل للحذف */
+div.wp-link-input {
+    width: 200px !important;
+  }	
+	
+	
 .woocommerce table.shop_table {
     width: 100%;
     border-collapse: collapse;
@@ -44,12 +49,12 @@
 /* لون خلفية للصفوف الفردية */
 .woocommerce table.shop_table tr:nth-child(odd) {
     background-color: #f9f9f9;
-}
+	}
 
 /* لون خلفية للصفوف الزوجية */
 .woocommerce table.shop_table tr:nth-child(even) {
     background-color: #ffffff;
-}
+	}
 
 /* إزالة الخط الفاصل في الصف الأخير */
 .woocommerce table.shop_table tr:last-child td {
@@ -58,7 +63,7 @@
 
 /* تغيير لون الخلفية عند التمرير */
 .woocommerce table.shop_table tr:hover {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
 }
 	
 	
@@ -137,10 +142,10 @@
 	.dataTables_wrapper {
     background-color: #ffffff;
     border-radius: 12px;
-    padding: 20px;
     margin: 15px 0;
     color: #333;
-}
+
+	}
 
 .dataTables_wrapper .dataTables_filter {
     margin-bottom: 15px;
@@ -322,7 +327,9 @@ font-weight:bold;
 	
 .style-simple .ui-tabs .ui-tabs-nav li {
   display: inline-flex;
-	}	
+	    border-radius: 10px;
+	}
+	
 	
 	
 .woocommerce .woocommerce-order-details :last-child {
@@ -371,10 +378,18 @@ woocommerce .woocommerce-order-details :last-child {
         padding-top: 6px;
     }
     
-    .cwmm-chat-box.icons-view-vertical.position-right {
-        padding-bottom: 25px;
-        margin-left: 20px;
-    }
+.cwmm-chat-box.icons-view-vertical.position-right {
+    transform: translateY(-70px);
+    z-index: 9999 !important; 
+position: sticky;
+margin-right: 270px;
+}
+
+#cwmm-widget-container {
+    height: 30px !important; 
+}
+
+}
     
     .mfn-cart-holder .mfn-ch-content .mfn-ch-product .mfn-chp-image a img {
         margin-left: 5px;
@@ -496,7 +511,6 @@ border: none;
         font-size: 12px;
         text-align: right;
     }
-}
 
 /* تخصيص التنسيق الخارجي */
 
@@ -720,13 +734,11 @@ table.shop_table th:first-child {
     border-radius: 0 0 6px 6px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ui-widget.ui-widget-content {
     border: none !important; 
     border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 font-family: inherit;
 }
 
@@ -827,7 +839,6 @@ font-family: inherit;
     border-radius: 12px;
     padding: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
 }
 
 
@@ -912,10 +923,45 @@ font-family: inherit;
 }
 
 .mce-toolbar .mce-ico {
-  color: beige !important;
+  color: #522175  !important;
   
 }
 
 #mceu_13 {
     display: none !important;
+}
+#wcfm-main-contentainer a.add_new_wcfm_ele_dashboard {
+  background: #673ab7 !important;
+  font-weight: bold  !important;
+color: wheat !important;
+}
+
+#mceu_29{
+  background: wheat !important;
+}
+
+.woo-wallet-my-wallet-container, .woo-wallet-sidebar {
+  border-radius: 10px;
+border: none;
+}
+
+
+select {
+  width: 82%;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 20px center; 
+  background-repeat: no-repeat;
+  transition: border-color 0.3s ease; 
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
 }
