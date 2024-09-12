@@ -20,6 +20,15 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+	
+#wcfmmp-user-locaton-map {
+	width: 100%; 
+	height: 250px; 
+	border-radius: 5px;
+margin-bottom: 20px;
+	}
+	
+	
 /* قابل للحذف */
 div.wp-link-input {
     width: 200px !important;
