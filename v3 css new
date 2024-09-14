@@ -1053,10 +1053,30 @@ select:focus {
   background-color: #F0F8FF;
   padding: 3px;
   border-radius: 10px;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 
 .woocommerce-form-coupon-toggle .woocommerce-info {
   background-color: #F0F8FF;
+}
+
+.mfn-cart-holder .mfn-ch-content .mfn-ch-product .mfn-chp-footer .mfn-chpf-col a.mfn-chp-remove {
+  color: darkred !important;
+}
+
+.mfn-cart-holder .mfn-free-delivery-info {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+ .wishlist .wishlist-row {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-right: 5px;
+  }
+
+.wishlist .wishlist-row .wishlist-options .added_to_cart {
+  padding-top: 10px; 
+  background-color: #673AB7;
 }
