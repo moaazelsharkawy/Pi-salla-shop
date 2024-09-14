@@ -20,8 +20,37 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
-	
 
+
+	
+#gt_float_wrapper {
+  z-index: 5 !important;
+}
+	
+.gt_float_switcher {
+  font-size: 14px;
+  transform: translate(-25px, -45px);
+  border-radius: 10px !important;
+}
+
+
+	.woocommerce-button.button.wpifw-my-account-invoice {
+    display: block !important;
+    width: fit-content !important;
+    background-color: cornflowerblue !important;
+    padding: 10px 20px 5px 20px !important;
+	border: none !important;
+    border-radius: 5px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+ margin: 10px 26px 0 auto !important; 
+margin-bottom: 10px !important;
+
+}
+
+
+	
+	
 .woocommerce-followings-table__row.woocommerce-followings-table__row--status-completed.followings {
     background-color: aliceblue !important;
     border-radius: 10px;
@@ -394,10 +423,8 @@ woocommerce .woocommerce-order-details :last-child {
     }
     
 .cwmm-chat-box.icons-view-vertical.position-right {
-    transform: translateY(-70px);
     z-index: 9999 !important; 
 position: sticky;
-margin-right: 270px;
 }
 
 #cwmm-widget-container {
@@ -703,7 +730,7 @@ table.shop_table th:first-child {
   text-align: right !important; 
 }
 .woocommerce-customer-details  {
-  background-color: #F9FAEE;
+  background-color: aliceblue;
   border-radius: 10px;
 }
 
@@ -1080,3 +1107,8 @@ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   padding-top: 10px; 
   background-color: #673AB7;
 }
+
+.woocommerce-order-details {
+  background-color: aliceblue !important; 
+}
+
