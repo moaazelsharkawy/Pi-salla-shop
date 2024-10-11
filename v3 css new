@@ -1,6 +1,6 @@
 /* تعديل حدود الأزرار */
 .yith-wapo-addon.yith-wapo-addon-type-number.default-closed.toggle-closed,
-.yith-wapo-addon.yith-wapo-addon-type-textarea.default-closed.toggle-closed {
+.yith-wapo-addon.yith-wapo-addon-type-textarea.default-closed.toggle-closed,#yith-wapo-addon-52 {
     border-radius: 5px;
 }
 
@@ -20,8 +20,39 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+	
+.woocommerce-button.button.wpifw-my-account-invoice {
+    background-color: #0073aa;
+    color: #fff; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: none;
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease; 
+    transform: translateX(-30px);
+	}
 
+.woocommerce-button.button.wpifw-my-account-invoice:hover {
+    background-color: #005a87; 
+    color: #f1f1f1;
+}
+	
+	
+	
+.mining-statistics {
+  text-align: right !important;
+  margin-bottom: 15px; /* تباعد بين العناصر */
+}
 
+.mining-statistics p {
+  margin-bottom: 10px!important;/* تباعد بين الأسطر داخل الفقرات */
+}
+
+	
+	
+ #wcfm-main-contentainer input.wcfm_bulk_edit {
+    display: inline-block !important;
+  }
 	
 	
 .shop_table.woocommerce-checkout-review-order-table {
@@ -611,33 +642,33 @@ position: sticky;
     
     .woo-wallet-withdrawal-detals {
         width: 100%;
-        overflow-x: auto; /* إضافة شريط تمرير أفقي إذا لزم الأمر */
+        overflow-x: auto;
     }
     
     .woo-wallet-withdrawal-detals th,
     .woo-wallet-withdrawal-detals td {
-        display: block; /* تحويل العناصر إلى كتل لتناسب العرض */
-        width: 100%; /* جعل عرض الخلايا 100% لملاءمة المحتوى */
-        box-sizing: border-box; /* التأكد من أن padding و border لا تؤثر على العرض */
-        padding: 10px; /* ضبط padding حسب الحاجة */
-        text-align: right; /* ضبط المحاذاة لنصوص الجدول */
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        padding: 10px; 
+        text-align: right; 
     }
     
     .woo-wallet-withdrawal-detals thead {
-        display: none; /* إخفاء رأس الجدول إذا كان يحجب المحتوى */
+        display: none;
     }
     
     .woo-wallet-withdrawal-detals tr {
-        margin-bottom: 10px; /* إضافة مسافة بين الصفوف */
-        display: block; /* تحويل الصفوف إلى كتل لتناسب العرض */
+        margin-bottom: 10px;
+        display: block;
     }    
     
     .woo-wallet-withdrawal-detals tr:nth-child(odd) {
-        background-color: #f9f9f9; /* خلفية باهتة للصفوف الفردية */
+        background-color: #f9f9f9; 
     }
 
     .woo-wallet-withdrawal-detals tr:nth-child(even) {
-        background-color: #ffffff; /* خلفية بيضاء للصفوف الزوجية */
+        background-color: #ffffff; 
     }    
     
     /* تعديل المسافة على اليمين في الطلب */
@@ -750,6 +781,8 @@ padding: 8px;
     font-family: 'mfn-icons' !important;
     content: "\e8a5" !important;
 }
+
+
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--support-tickets a::before {
     font-family: 'mfn-icons' !important;
@@ -1175,23 +1208,20 @@ border: none;
 
 
 select {
-  width: 82%;
-  padding: 10px 40px 10px 10px;
-  font-size: 16px;
+  width: 100%;
+	font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: white;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-position: right 20px center; 
   background-repeat: no-repeat;
   transition: border-color 0.3s ease; 
 }
 
 select:focus {
   border-color: #007bff;
-  outline: none;
 }
 
 
@@ -1415,4 +1445,20 @@ border: 1px solid #d3d3d3;
 
 #wc-wallet-transaction-details_wrapper td {
     color: #666;
+}
+
+.pi-wrap {
+
+  font-style: normal !important;
+}
+/* إضافة أيقونة المعول بجانب عنصر القائمة */
+.my-custom-icon-class a::before {
+    content: '';
+    background-image: url('/wp-content/uploads/2024/08/st500-1.png'); 
+    background-repeat: no-repeat; 
+    width: 16px; 
+    height: 16px;
+    display: inline-block; 
+    margin-right: 8px;
+    vertical-align: middle; 
 }
