@@ -11,6 +11,7 @@
     top: 5px;
 }
 
+
 /* تخصيص رمز في رابط المحفظة */
 .woocommerce-MyAccount-navigation > ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before {
     font-family: 'woowallet' !important;
@@ -20,6 +21,29 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+
+  .mcb-section .mcb-wrap .mcb-item-350ccemlr ul.products li.product .title {
+    font-size: 14px!important;
+    padding-bottom: 10px!important;
+  }	
+	
+	
+	
+#chatbase-bubble-button {
+    position: fixed !important;
+    right: 5px !important;
+    bottom: 20px !important;
+    transform: translateY(-50px) !important;
+width: 47px !important;
+height:47px !important;
+	}
+
+.style-simple .ui-tabs .ui-tabs-nav li {
+  display: inline-flex;
+  border-radius: 10px;
+  border: none; 
+}
+	
 	
 .woocommerce-button.button.wpifw-my-account-invoice {
     background-color: #0073aa;
@@ -97,8 +121,8 @@
 }	
 	
 .shop_table.woocommerce-checkout-review-order-table::after, .woocommerce-table.woocommerce-table--order-details.shop_table.order_details::after {
-    content: '⬅️'; 
-    position: absolute;
+    content: '⬅️';   
+	position: absolute;
     top: 0;
     right: 0;
     width: 30px;
@@ -565,10 +589,6 @@ font-weight:bold;
 
 
 	
-.style-simple .ui-tabs .ui-tabs-nav li {
-  display: inline-flex;
-	    border-radius: 10px;
-	}
 	
 	
 	
@@ -642,33 +662,33 @@ position: sticky;
     
     .woo-wallet-withdrawal-detals {
         width: 100%;
-        overflow-x: auto;
+        overflow-x: auto; /* إضافة شريط تمرير أفقي إذا لزم الأمر */
     }
     
     .woo-wallet-withdrawal-detals th,
     .woo-wallet-withdrawal-detals td {
-        display: block;
-        width: 100%;
-        box-sizing: border-box; 
-        padding: 10px; 
-        text-align: right; 
+        display: block; /* تحويل العناصر إلى كتل لتناسب العرض */
+        width: 100%; /* جعل عرض الخلايا 100% لملاءمة المحتوى */
+        box-sizing: border-box; /* التأكد من أن padding و border لا تؤثر على العرض */
+        padding: 10px; /* ضبط padding حسب الحاجة */
+        text-align: right; /* ضبط المحاذاة لنصوص الجدول */
     }
     
     .woo-wallet-withdrawal-detals thead {
-        display: none;
+        display: none; /* إخفاء رأس الجدول إذا كان يحجب المحتوى */
     }
     
     .woo-wallet-withdrawal-detals tr {
-        margin-bottom: 10px;
-        display: block;
+        margin-bottom: 10px; /* إضافة مسافة بين الصفوف */
+        display: block; /* تحويل الصفوف إلى كتل لتناسب العرض */
     }    
     
     .woo-wallet-withdrawal-detals tr:nth-child(odd) {
-        background-color: #f9f9f9; 
+        background-color: #f9f9f9; /* خلفية باهتة للصفوف الفردية */
     }
 
     .woo-wallet-withdrawal-detals tr:nth-child(even) {
-        background-color: #ffffff; 
+        background-color: #ffffff; /* خلفية بيضاء للصفوف الزوجية */
     }    
     
     /* تعديل المسافة على اليمين في الطلب */
@@ -776,6 +796,7 @@ padding: 8px;
     font-family: 'mfn-icons' !important; 
     content: "\e8aa" !important;
 }
+
 
 .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--inquiry a::before {
     font-family: 'mfn-icons' !important;
@@ -939,7 +960,6 @@ table.shop_table th:first-child {
 }
 
 .ui-tabs .ui-tabs-nav {
-    border-bottom: 2px solid #e1e1e1;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -950,7 +970,7 @@ table.shop_table th:first-child {
     display: inline-block;
     margin: 0;
     padding: 10px 20px;
-    border: 1px solid #ddd;
+    border: none; /* إزالة جميع الحدود */
     border-radius: 6px 6px 0 0;
     background-color: #fafafa;
     color: #333;
@@ -962,7 +982,7 @@ table.shop_table th:first-child {
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
     background-color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #800080; /* سميك ولون أرغواني */
     color: #007bff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -973,7 +993,7 @@ table.shop_table th:first-child {
 }
 
 .ui-tabs .ui-tabs-panel {
-    border: 1px solid #ddd;
+    border: none; /* إزالة الحدود */
     border-radius: 0 0 6px 6px;
     padding: 20px;
     background-color: #fff;
@@ -1454,11 +1474,224 @@ border: 1px solid #d3d3d3;
 /* إضافة أيقونة المعول بجانب عنصر القائمة */
 .my-custom-icon-class a::before {
     content: '';
-    background-image: url('/wp-content/uploads/2024/08/st500-1.png'); 
-    background-repeat: no-repeat; 
-    width: 16px; 
-    height: 16px;
-    display: inline-block; 
+    background-image: url('/wp-content/uploads/2024/08/st500-1.png'); /* استبدل بالمسار الصحيح للصورة */
+    background-size: contain; /* تأكد من أن الصورة تناسب المساحة */
+    background-repeat: no-repeat; /* عدم تكرار الصورة */
+    width: 16px; /* عرض الصورة */
+    height: 16px; /* ارتفاع الصورة */
+    display: inline-block; /* استخدام عنصر كتل لعرض الصورة */
+    margin-right: 8px; /* مسافة بين الرمز والنص */
+   vertical-align: middle; /* لمحاذاة الرمز مع النص */
+
+
+}
+
+.my-usdt-icon-class a::before {
+    content: '';
+    background-image: url('/wp-content/uploads/2024/10/exchange.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
     margin-right: 8px;
-    vertical-align: middle; 
+    vertical-align: middle;
+    line-height: normal;
+}
+
+
+.yith-similar-products {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.yith-similar-products:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.yith-similar-products h2 {
+    font-size: 16px;
+    color: #0073e6;
+    margin-bottom: 10px; /* تقليل المسافة تحت العنوان */
+    text-align: right;
+    border-bottom: 3px solid #0073e6; /* إضافة خط سميك تحت العنوان */
+    padding-bottom: 5px;
+    display: inline-block; /* لجعل العنوان والزر في صف واحد */
+    margin-right: 10px; /* إضافة مسافة يمين العنوان */
+}
+.yith-similar-products .shop-link {
+    position: relative;
+    left: -8px; /* تحريك الزر إلى اليسار بمقدار 10px */
+    font-size: 15px;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.yith-similar-products .shop-link:hover {
+    color: #0073e6; /* تغيير لون الزر عند التمرير */
+    text-decoration: underline;
+}
+
+.yith-similar-products ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.yith-similar-products li {
+    font-size: 12px;
+    margin: 2px 0; /* تقليص المسافة بين المنتجات */
+    color: #555;
+}
+
+
+.yith-similar-products a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 14px; /* تقليل حجم النص */
+}
+
+.yith-similar-products a:hover {
+    color: #005bb5;
+}
+
+.yith-similar-products .yith-wcwl-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.yith-similar-products .yith-wcwl-title h2 {
+    flex: 1;
+}
+
+.yith-similar-products .yith-wcwl-title a {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.yith-similar-products .yith-wcwl-title a:hover {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+
+.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--preorder a::before {    
+    font-family: 'mfn-icons' !important;
+    content: "\e825" !important;
+}
+
+.mfn-woo-product-title {
+  font-weight: bold;
+  font-size: 14px; 
+  color: #333333;
+  white-space: normal; /* السماح بالتفاف النص */
+  word-wrap: break-word; /* كسر الكلمات الطويلة */
+  overflow-wrap: break-word; /* دعم إضافي للتفاف النص */
+  line-height: 1.5; /* تحسين المسافة بين الأسطر */
+  max-width: 300px; /* تحديد عرض مناسب للحاوية */
+}
+
+
+
+#wcfmmp-store .product_area .products-wrapper ul li.product {
+  background-color: #F7F8E6;
+  border-radius: 10px;
+}
+
+
+
+
+.mfn-woo-filters-wrapper.shop-filters.mfn-additional-shop-options-active {
+  display: flex; /* تنظيم العناصر داخل الحاوية أفقيًا */
+  align-items: center; /* محاذاة العناصر عموديًا */
+  justify-content: flex-end; /* وضع العنصر في الجهة اليمنى أو حسب اللغة */
+  gap: 10px; /* مسافة بين العناصر */
+  background-color: #f9f9f9; /* لون خلفية خفيف */
+  padding: 10px 15px; /* مسافات داخلية للحاوية */
+  border: 1px solid #ddd; /* إطار بسيط */
+  border-radius: 8px; /* زوايا دائرية */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.mfn-woo-filters-wrapper.shop-filters.mfn-additional-shop-options-active select {
+  font-size: 14px; /* حجم خط مناسب */
+  color: #333; /* لون النص */
+  background-color: #fff; /* خلفية الحقل */
+  border: 1px solid #ccc; /* إطار الحقل */
+  border-radius: 6px; /* زوايا دائرية */
+  outline: none; /* إزالة الإطار الأزرق عند التركيز */
+  transition: all 0.3s ease; /* تأثير سلس عند التفاعل */
+}
+
+.mfn-woo-filters-wrapper.shop-filters.mfn-additional-shop-options-active select:hover {
+  border-color: #888; /* تغيير لون الإطار عند التمرير */
+}
+
+.mfn-woo-filters-wrapper.shop-filters.mfn-additional-shop-options-active select:focus {
+  border-color: #673AB7; /* لون إطار مختلف عند التركيز */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* تأثير التركيز */
+}
+
+.mfn-woo-filters-wrapper.shop-filters.mfn-additional-shop-options-active .filter-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px; /* مسافة بين النص وحقل التحديد */
+}
+
+
+
+.wcfmmp-store-map {
+  position: relative; /* التحكم بالمحتوى داخل العنصر */
+  width: 100%; /* عرض كامل داخل الحاوية */
+  max-width: 100%; /* منع تجاوز عرض الجهاز */
+  aspect-ratio: 16 / 9; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  border: 1px solid #ddd; /* إطار خفيف */
+  border-radius: 8px; /* زوايا ناعمة */
+  overflow: hidden; /* منع تجاوز المحتوى الزائد */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  margin: 0 auto; /* وسطنة العنصر أفقياً */
+  display: flex; /* لتهيئة الوسطنة العمودية (إذا كانت الحاوية أكبر من العنصر) */
+  align-items: center; /* وسطنة عمودياً */
+  justify-content: center; /* وسطنة أفقياً */
+  transform: translateX(3%); /* تحريك العنصر لليمين بنسبة 10% */
+}
+
+.wcfmmp-store-map iframe {
+  position: absolute; /* ملء كامل داخل العنصر */
+  top: 0;
+  left: 0;
+  width: 100%; /* عرض كامل */
+  height: 100%; /* ارتفاع كامل */
+  border: none; /* إزالة الإطار الافتراضي */
+}
+
+
+/* تحسين عنوان المنتج */
+.woocommerce ul.products li.product, .woocommerce ul.products li.product .mfn-li-product-row-title .title, .woocommerce-page ul.products li.product .mfn-li-product-row-title .title{
+  font-size: 12px; 
+  font-weight: bold; 
+  color: #333333; 
+  text-align: center; 
 }
