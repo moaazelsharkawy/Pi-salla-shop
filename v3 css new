@@ -21,7 +21,25 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+
+	#wcfm-marketplace-map
+	{
+margin-right: 0%!important;
+} 
 	
+	#wcfmmp-store .wcfmmp-store-map button {
+  width: auto !important;
+  height: auto !important;
+}
+	
+	
+.gm-control-active{
+padding: 20px !important;
+}		
+
+#C628B79A-A75E-4D9C-B06F-B4489820D70C{
+display: flex !important;
+}		
 	
 .account-orders-table,.account-followings-table,.account-support-tickets-table,.account-enquiry-table  {
     width: 100% !important;
@@ -1765,4 +1783,9 @@ border: 1px solid #d3d3d3;
   font-weight: bold; 
   color: #333333; 
   text-align: center; 
+}
+
+.store_location_wrap i.wcfmmmp_locate_icon {
+  
+    transform: translate(-130px, -40px)!important;
 }
