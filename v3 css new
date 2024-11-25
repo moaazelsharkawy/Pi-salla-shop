@@ -21,7 +21,33 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+	
+	
+.account-orders-table,.account-followings-table,.account-support-tickets-table,.account-enquiry-table  {
+    width: 100% !important;
+    margin: 0 auto !important; /* لتوسيط الجدول إذا كان هناك تباين في العرض */
+}	
+		
+	
+	.woocommerce table.shop_table td.product-name .variation {
+    word-wrap: break-word; /* تكسر الكلمات الطويلة إذا لزم الأمر */
+    white-space: normal; /* السماح بتغيير السطور */
+transform: translateX(-10px)
+	}
 
+	
+.woocommerce-cart-form__contents {
+    transform: translateX(12px);
+}	
+	
+	
+.woocommerce .cart-collaterals .cart_totals .shop_table, .woocommerce-page .cart-collaterals .cart_totals .shop_table{
+	
+	transform: translateX(15px);
+	}	
+	
+	
+	
   .mcb-section .mcb-wrap .mcb-item-350ccemlr ul.products li.product .title {
     font-size: 14px!important;
     padding-bottom: 10px!important;
@@ -79,62 +105,106 @@ height:47px !important;
   }
 	
 	
+	
+	
 .shop_table.woocommerce-checkout-review-order-table {
+    transform: translateX(17px);
     border-collapse: collapse !important;
-    width: 100% !important;
-    margin: 20px 0 !important;
-    background-color: #f9f9f9 !important;
+    width: 115% !important;
+    margin: 0 auto 20px auto !important;
+    background-color: #ffffff !important;
     display: block !important;
     overflow-x: auto !important;
     white-space: nowrap !important;
     position: relative !important;
     padding-bottom: 20px !important;
-	}
-
-.shop_table.woocommerce-checkout-review-order-table th {
-    background-color: #f3edf7 !important;
-    color: #030303 !important;
-    padding: 10px !important;
-    text-align: left !important;
-    border-bottom: 2px solid #ddd !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.shop_table.woocommerce-checkout-review-order-table th,
 .shop_table.woocommerce-checkout-review-order-table td {
-    padding: 8px !important;
-    border-bottom: 1px solid #ddd !important;
-    color: #333 !important;
+    padding: 14px !important;
+    text-align: right !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    color: #6c4f87 !important; /* لون أرجواني باهت للنص */
+    font-size: 15px !important;
+    font-weight: 500;
+}
+
+.shop_table.woocommerce-checkout-review-order-table th {
+    background-color: #f2e6f7 !important; /* خلفية أرجوانية فاتحة */
+    color: #5d3a66 !important; /* لون النص أرجواني داكن */
+    padding: 14px !important;
+    text-align: right !important;
+    border-bottom: 2px solid #d1a9d2 !important; /* حدود أرجوانية فاتحة */
+    font-weight: bold;
 }
 
 .shop_table.woocommerce-checkout-review-order-table tr:nth-child(even) {
-    background-color: #f2f2f2 !important;
+    background-color: #f9f1f9 !important; /* خلفية صفوف زوجية بأرجواني باهت */
 }
-	
+
+.shop_table.woocommerce-checkout-review-order-table tr:nth-child(odd) {
+    background-color: #ffffff !important;
+}
+
+.shop_table.woocommerce-checkout-review-order-table td {
+    font-size: 14px !important;
+}
+
+.shop_table.woocommerce-checkout-review-order-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.shop_table.woocommerce-checkout-review-order-table tr:hover {
+    background-color: #f0e5f7 !important; /* تأثير خلفية عند التمرير بأرجواني باهت */
+}
+
 .shop_table.woocommerce-checkout-review-order-table::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20px; 
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); 
+    height: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
     z-index: 5;
-}	
-	
-.shop_table.woocommerce-checkout-review-order-table::after, .woocommerce-table.woocommerce-table--order-details.shop_table.order_details::after {
-    content: '⬅️';   
-	position: absolute;
+}
+
+.shop_table.woocommerce-checkout-review-order-table::after, 
+.woocommerce-table.woocommerce-table--order-details.shop_table.order_details::after {
+    content: '⬅️';
+    position: absolute;
     top: 0;
     right: 0;
     width: 30px;
     height: 100%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-    color: #007bff; 
+    color: #9b66b1; /* لون أرجواني أغمق */
     text-align: center;
     line-height: 100%;
     pointer-events: none;
     z-index: 10;
-margin-bottom: 10px;
-	}	
+    margin-bottom: 10px;
+}
+
+.shop_table.woocommerce-checkout-review-order-table td a {
+    color: #9b66b1 !important; /* أرجواني مميز للروابط */
+    font-weight: bold;
+}
+
+.shop_table.woocommerce-checkout-review-order-table td a:hover {
+    color: #7f4f92 !important; /* تغيير لون الرابط عند التمرير إلى أرجواني داكن */
+}
+	
+.woocommerce td.product-name dl.variation {
+
+  transform: translateX(13px);
+}	
+	
+	
+	
 	
 	
 	
@@ -280,12 +350,12 @@ div.wp-link-input {
   }	
 	
 .woocommerce table.shop_table {
-    width: 100%;
-    border-collapse: collapse;
+width: 110%;
     background-color: #fff;
     border-radius: 8px;
 box-shadow: 
             0 0 15px rgba(96, 28, 164, 0.15);
+
 	}
 
 .woocommerce table.shop_table th {
@@ -736,7 +806,8 @@ border: none;
         float: none;
         text-align: right;
         margin-left: 10px;
-    }
+    margin: 0 !important; 
+}
 
     /* ضمان لف النص في الجداول */
     .woocommerce-table.woocommerce-table--custom-fields.shop_table.custom-fields {
