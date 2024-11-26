@@ -21,6 +21,11 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+	
+	.wcfmmp_sold_by_wrapper a {
+  display: ruby !important;
+ 
+}
 
 	#wcfm-marketplace-map
 	{
@@ -1113,7 +1118,7 @@ font-family: inherit;
 }
 
 .woocommerce-MyAccount-navigation {
-  font-size: 12px;
+  font-size: 13px;
 font-weight: bold;
   background-color: aliceblue !important;
 border-radius: 10px;
@@ -1259,6 +1264,12 @@ border-radius: 10px;
 
 @media (min-width: 768px) { /* يحدد الشاشات الأكبر من الموبايل */
 
+ .woocommerce-cart-form__contents{
+
+  background-color: aliceblue;
+  border-radius: 8px!important;
+}
+	
 #wcfmmp-user-locaton-map {
 margin-bottom: 20px;
   border-radius: 10px;
@@ -1788,4 +1799,11 @@ border: 1px solid #d3d3d3;
 .store_location_wrap i.wcfmmmp_locate_icon {
   
     transform: translate(-130px, -40px)!important;
+    background-color: gainsboro;
+}
+
+.vendor_rating .wcfmmp-store-rating,
+.wcfmmp_sold_by_container .wcfmmp-store-rating {
+
+margin: 0 auto !important;
 }
