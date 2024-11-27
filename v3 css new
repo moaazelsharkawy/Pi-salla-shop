@@ -21,6 +21,12 @@
 /* تخصيص الشاشة الصغيرة (الموبايل) */
 @media only screen and (max-width: 767px) {
 
+
+	
+  .mfn-header-login h4 {
+    font-size: 20px!important;
+  
+  }	
 	
 	.wcfmmp_sold_by_wrapper a {
   display: ruby !important;
@@ -1806,4 +1812,10 @@ border: 1px solid #d3d3d3;
 .wcfmmp_sold_by_container .wcfmmp-store-rating {
 
 margin: 0 auto !important;
+}
+
+	
+.mfn-close-icon .icon {
+  color: rgb(146, 6, 6)!important;
+
 }
