@@ -1,0 +1,225 @@
+function display_mining_statistics() {
+    // إجمالي المعروض
+    $total_coins = 75000000; // إجمالي المعروض ثابت
+
+    global $wpdb;
+
+    // استرجاع مجموع الرصيد المعدن
+    $total_mined_balance = $wpdb->get_var("SELECT SUM(COALESCE(meta_value, 0)) FROM {$wpdb->prefix}usermeta WHERE meta_key = 'st_mined_balance'");
+
+    // استرجاع مجموع السحوبات المعتمدة
+    $total_withdrawals_approved = $wpdb->get_var("SELECT SUM(amount) FROM {$wpdb->prefix}withdrawal_requests WHERE status = 'approved'");
+
+    // استرجاع مجموع القيم المصروفة في جدول wp_st_deposit
+    $total_spent = $wpdb->get_var("SELECT SUM(amount) FROM {$wpdb->prefix}st_deposit");
+
+    // استرجاع مجموع الأرصدة المحولة (سواب)
+$total_swaps = $wpdb->get_var(
+    "SELECT SUM(st_received_amount) 
+    FROM {$wpdb->prefix}swaps 
+    WHERE st_received_amount > 0"
+);
+
+
+    // حساب نسبة المجتمع
+    $community_percentage = 0.90; // 90%
+    $community_supply = $total_coins * $community_percentage; // الكمية المتاحة للمجتمع
+
+    // حساب الكمية المتبقية للتعدين
+    $remaining_supply_for_mining = $community_supply - ($total_mined_balance + $total_withdrawals_approved + $total_spent + $total_swaps); // خصم الرصيد المعدن الحالي، الرصيد المسحوب، الرصيد المستخدم في الشراء، والرصيد المحول (سواب)
+
+    // حساب عدد المعدنين النشطين
+    $active_miners = count(get_users(array(
+        'meta_query' => array(
+            array(
+                'key' => 'st_mining_session',
+                'value' => '',
+                'compare' => '!=' // تأكد أن القيمة ليست فارغة
+            ),
+        ),
+        'fields' => 'ids', // فقط احصل على معرفات المستخدمين
+    )));
+
+    // عرض الإحصائيات بتنسيق احترافي
+    ob_start(); // بدء التخزين المؤقت للإخراج
+    ?>
+    <style>
+        /* تنسيق المحاذاة للنصوص في حالة الموبايل */
+        @media (max-width: 768px) {
+            .mining-statistics {
+                text-align: right; /* محاذاة النص لليمين */
+            }
+        }
+        welcome-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h1:hover {
+            font-size: 26px;
+        }
+    </style>
+
+    <!-- قسم الترحيب -->
+    <div class="welcome-section" style="background: linear-gradient(135deg, #6a5acd, #8a2be2); color: #fff; border-radius: 15px; padding: 30px; margin: 20px auto; text-align: center; width: 100%; max-width: 1200px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <h1 style="font-size: 24px; margin: 0; font-weight: 600; transition: font-size 0.3s ease;">مرحباً بكم في نظام تعدين Salla Token</h1>
+        <p style="font-size: 18px; margin-top: 12px; font-weight: 400;">Welcome to the Salla Token Mining System</p>
+        
+        <!-- أيقونة عرض العقد الذكي -->
+        <a href="https://tonviewer.com/EQB6KwFxe5wSXqRkV51m53iZsUOiwjTk41hqWBbbrbdBS5sj" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 20px; text-decoration: none; color: #fff;">
+            <img src="/wp-content/uploads/2024/11/contract.png" alt="Smart Contract" style="width: 40px; height: 40px; margin-right: 8px;">
+            <div style="text-align: left;">
+                <span style="display: block; font-size: 16px; font-weight: 500;">عرض العقد الذكي</span>
+                <span style="display: block; font-size: 16px; font-weight: 400; opacity: 0.8;">View Smart Contract</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="mining-statistics" style="background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin: 20px 0; ">
+        <h2 style="font-size: 18px; color: #333; margin-bottom: 15px; display: flex; align-items: center; text-align: right;">
+            <img src="/wp-content/uploads/2024/08/st500.png" alt="Icon" style="width: 30px; height: 30px; margin-left: 10px;">
+            <span style="margin-left: 15px;">الاحصائية العامة للتعدين</span>
+        </h2>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-users" style="margin-left: 10px; color: #4CAF50;"></i> 
+                المعدنين النشطين:
+            </span>
+            <strong style="color: #4CAF50;"><?php echo $active_miners; ?></strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-coins" style="margin-left: 10px; color: #4CAF50;"></i> 
+                إجمالي العملات:
+            </span>
+            <strong style="color: #4CAF50;"><?php echo number_format($total_coins); ?> ST</strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-chart-pie" style="margin-left: 10px; color: #2196F3;"></i> 
+                نسبة المجتمع:
+            </span>
+            <strong style="color: #2196F3;"><?php echo ($community_percentage * 100) . '%'; ?></strong>
+        </p>
+
+        <p style="font-size: 16px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-wallet" style="margin-left: 10px; color: #f44336;"></i> 
+                الرصيد المعدن الحالي:
+            </span>
+            <strong style="color: #f44336;"><?php echo number_format($total_mined_balance, 7); ?> ST</strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-hand-holding-dollar" style="margin-left: 10px; color: #f44336;"></i> 
+                الرصيد المعدن المسحوب:
+            </span>
+            <strong style="color: #f44336;"><?php echo number_format($total_withdrawals_approved, 7); ?> ST</strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-shopping-cart" style="margin-left: 10px; color: #8B0000"></i> 
+                الرصيد المستخدم في الشراء (سيتم حرقه):
+            </span>
+            <strong style="color: #8B0000"><?php echo number_format($total_spent, 7); ?> ST</strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-arrow-right-arrow-left" style="margin-left: 10px; color: #f44336;"></i> 
+                مجموع حوض السيولة من (سواب):
+            </span>
+            <strong style="color: #f44336;"><?php echo number_format($total_swaps, 7); ?> ST</strong>
+        </p>
+
+        <p style="font-size: 15px; color: #555; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+            <span style="display: flex; align-items: center;">
+                <i class="fa-solid fa-hammer" style="margin-left: 10px; color: #FFC107;"></i> 
+                الكمية المتبقية للتعدين:
+            </span>
+            <strong style="color: #FFC107;"><?php echo number_format($remaining_supply_for_mining, 7); ?> ST</strong>
+        </p>
+    </div>
+
+    <?php
+    return ob_get_clean(); // إرجاع المحتوى
+}
+
+// دالة تصدير المحتوى باستخدام شورت كود
+function mining_statistics_shortcode() {
+    return display_mining_statistics(); // إرجاع محتوى الـ div
+}
+
+// تسجيل الشورت كود
+add_shortcode('mining_statistics', 'mining_statistics_shortcode');
+
+// إضافة وظيفة التحديث اليومي
+function update_mining_statistics() {
+    global $wpdb;
+
+    // الحصول على إجمالي الرصيد المعدن
+    $total_mined_balance = $wpdb->get_var("SELECT SUM(COALESCE(meta_value, 0)) FROM {$wpdb->prefix}usermeta WHERE meta_key = 'st_mined_balance'");
+
+    // الحصول على مجموع السحوبات المعتمدة
+    $total_withdrawals_approved = $wpdb->get_var("SELECT SUM(amount) FROM {$wpdb->prefix}withdrawal_requests WHERE status = 'approved'");
+
+    
+    // الحصول على عدد المعدنين النشطين
+    $active_miners = count(get_users(array(
+        'meta_query' => array(
+            array(
+                'key' => 'st_mining_session',
+                'value' => '',
+                'compare' => '!=' // تأكد أن القيمة ليست فارغة
+            ),
+        ),
+        'fields' => 'ids', // فقط احصل على معرفات المستخدمين
+    )));
+
+    // تخزين عدد المعدنين النشطين
+    update_option('stored_active_miners', $active_miners);
+
+    // استرجاع القيم المخزنة حاليًا للإحصائيات
+    $stored_total_mined_balance = get_option('stored_total_mined_balance', 0);
+    $stored_total_withdrawals_approved = get_option('stored_total_withdrawals_approved', 0);
+    $stored_active_miners = get_option('stored_active_miners', 0);
+    $stored_total_swaps = get_option('stored_total_swaps', 0);
+
+    // التحقق مما إذا كانت هناك تغييرات في البيانات
+    if ($total_mined_balance != $stored_total_mined_balance || 
+        $total_withdrawals_approved != $stored_total_withdrawals_approved ||
+        $active_miners != $stored_active_miners ||
+        $total_swaps != $stored_total_swaps) {
+        // إذا كانت البيانات مختلفة، نقوم بتحديث الإحصائيات
+
+        // تحديث القيم المخزنة
+        update_option('stored_total_mined_balance', $total_mined_balance);
+        update_option('stored_total_withdrawals_approved', $total_withdrawals_approved);
+        update_option('stored_active_miners', $active_miners);
+        update_option('stored_total_swaps', $total_swaps);
+
+        // رسالة في حال تم التحديث
+        error_log('تم تحديث الإحصائيات بناءً على بيانات جديدة');
+    } else {
+        // إذا لم يكن هناك تغييرات، يمكن تسجيل ملاحظة (اختياري)
+        error_log('لا يوجد بيانات جديدة لتحديث الإحصائيات');
+    }
+}
+
+// استدعاء الدالة لتحديث الإحصائيات عند تفعيل الإضافة
+register_activation_hook(__FILE__, 'update_mining_statistics');
+
+// استخدام Hook لتحديث المعدنين النشطين عند تغيير الجلسة
+add_action('updated_user_meta', 'update_active_miners_on_meta_change', 10, 4);
+
+function update_active_miners_on_meta_change($meta_id, $user_id, $meta_key, $meta_value) {
+    if ($meta_key === 'st_mining_session') {
+        // تحديث إحصائيات التعدين بعد تغيير الجلسة
+        update_mining_statistics();
+    }
+}
